@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorCodeGenerator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Generator & Converter</h1>
+
+        <label for="formatSelect">Choose Format:</label>
+        <select id="formatSelect" onchange="updatePlaceholder()">
+            <option value="hex">HEX</option>
+            <option value="rgb">RGB</option>
+            <option value="rgba">RGBA</option>
+            <option value="hsl">HSL</option>
+            <option value="hsla">HSLA</option>
+        </select>
+
+        <label for="colorInput">Enter Color Code:</label>
+        <input type="text" id="colorInput" placeholder="#ff5733">
+        <button onclick="convertColor()">Convert</button>
+
+        <div class="color-box" id="colorBox"></div>
+
+        <h3>Converted Colors:</h3>
+        <p><strong>HEX:</strong> <span id="hexOutput">---</span></p>
+        <p><strong>RGB:</strong> <span id="rgbOutput">---</span></p>
+        <p><strong>RGBA:</strong> <span id="rgbaOutput">---</span></p>
+        <p><strong>HSL:</strong> <span id="hslOutput">---</span></p>
+        <p><strong>HSLA:</strong> <span id="hslaOutput">---</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
